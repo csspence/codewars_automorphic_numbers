@@ -36,6 +36,18 @@ Explanation:
 6 squared is 36 , Ends with the same number's digits which are 6
 */
 
-function automorphic(n){
-  //your code here
+const automorphic = (n) => {
+  let squareStr = (n*n).toString();
+  let sSLength = squareStr.length();
+  let lastTwo = squareStr[sSLength - 2] + squareStr[sSLength - 1];
+  let nStr = n.toString();
+
+  if(squareStr.length === 1) {
+    return 'Automorphic';
+  } else if(lastTwo === nStr) {
+    return 'Automorphic';
+  } else {
+    return 'Not!!'
+  }
+
 }
